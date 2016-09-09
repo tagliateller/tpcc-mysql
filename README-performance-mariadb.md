@@ -37,3 +37,35 @@ count(s_w_id)
 
 ./tpcc_start -h127.0.0.1 -P3306 -dtpcc1000 -uroot -w1000 -c32 -r10 -l10800 -f 20160909-001.report -t 20160909-001.trx
 
+<Raw Results>
+  [0] sc:0 lt:63076  rt:0  fl:0 avg_rt: 2677.1 (5)
+  [1] sc:61 lt:62635  rt:0  fl:0 avg_rt: 940.5 (5)
+  [2] sc:8 lt:6299  rt:0  fl:0 avg_rt: 652.6 (5)
+  [3] sc:0 lt:6300  rt:0  fl:0 avg_rt: 7333.5 (80)
+  [4] sc:0 lt:6306  rt:0  fl:0 avg_rt: 10706.0 (20)
+ in 10800 sec.
+
+<Raw Results2(sum ver.)>
+  [0] sc:0  lt:63081  rt:0  fl:0 
+  [1] sc:61  lt:63017  rt:0  fl:0 
+  [2] sc:8  lt:6299  rt:0  fl:0 
+  [3] sc:0  lt:6307  rt:0  fl:0 
+  [4] sc:0  lt:6307  rt:0  fl:0 
+
+<Constraint Check> (all must be [OK])
+ [transaction percentage]
+        Payment: 43.33% (>=43.0%) [OK]
+   Order-Status: 4.36% (>= 4.0%) [OK]
+       Delivery: 4.35% (>= 4.0%) [OK]
+    Stock-Level: 4.36% (>= 4.0%) [OK]
+ [response time (at least 90% passed)]
+      New-Order: 0.00%  [NG] *
+        Payment: 0.10%  [NG] *
+   Order-Status: 0.13%  [NG] *
+       Delivery: 0.00%  [NG] *
+    Stock-Level: 0.00%  [NG] *
+
+<TpmC>
+                 350.422 TpmC
+[centos@ip-172-31-19-10 tpcc-mysql]$ ls
+
