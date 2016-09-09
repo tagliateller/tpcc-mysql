@@ -1,5 +1,9 @@
 # m4.large, us-west-1, direkte Ausführung perf.test auf DB-Server
 
+```bash
+mysql  Ver 15.1 Distrib 5.5.50-MariaDB, for Linux (x86_64) using readline 5.1
+```
+
 Nach dem Laden der Indizes:
 
 Dateisystem    Größe Benutzt Verf. Verw% Eingehängt auf
