@@ -76,6 +76,31 @@ count(s_w_id)
                  350.422 TpmC
 ```
 
+## Datensätze nach Ausführung
+
+[centos@ip-172-31-19-10 tpcc-mysql]$ mysql -u root -p -D tpcc1000 < count.sql                                                                                            
+Enter password: 
+count(w_id)
+1000
+count(d_w_id)
+10000
+count(c_w_id)
+30000000
+count(h_c_id)
+30064186
+count(no_w_id)
+8999436
+count(o_w_id)
+30063480
+count(ol_w_id)
+300631725
+count(i_id)
+100000
+count(s_w_id)
+100000000
+[centos@ip-172-31-19-10 tpcc-mysql]$ 
+
+
 # m4.large, us-west-1, Ausführung über Client (m4.large)
 
 ## verschiedene Größen von Buffer-Sizes
