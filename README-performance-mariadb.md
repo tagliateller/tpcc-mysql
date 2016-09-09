@@ -34,3 +34,6 @@ count(i_id)
 count(s_w_id)
 100000000
 [centos@ip-172-31-19-10 tpcc-mysql]$ 
+
+./tpcc_start -h127.0.0.1 -P3306 -dtpcc1000 -uroot -w1000 -c32 -r10 -l10800 -f 20160909-001.report -t 20160909-001.trx
+
