@@ -78,3 +78,10 @@ count(s_w_id)
 
 # m4.large, us-west-1, Ausführung über Client (m4.large)
 
+## verschiedene Größen von Buffer-Sizes
+
+/etc/my.cnf.d/server.cnf
+
+innodb_buffer_pool_size = 256M
+innodb_buffer_pool_size = 768M
+
