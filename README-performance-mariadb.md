@@ -11,10 +11,10 @@ tmpfs           3,7G       0  3,7G    0% /sys/fs/cgroup
 tmpfs           757M       0  757M    0% /run/user/1000
 [centos@ip-172-31-19-10 tpcc-mysql]$ df -h
 
-Datensätze:
+## Datensätze:
 
-[centos@ip-172-31-19-10 tpcc-mysql]$ mysql -u root -p -D tpcc1000 < count.sql 
-Enter password: 
+```bash
+$ mysql -u root -p -D tpcc1000 < count.sql 
 count(w_id)
 1000
 count(d_w_id)
@@ -33,10 +33,13 @@ count(i_id)
 100000
 count(s_w_id)
 100000000
-[centos@ip-172-31-19-10 tpcc-mysql]$ 
+```
 
+```bash
 ./tpcc_start -h127.0.0.1 -P3306 -dtpcc1000 -uroot -w1000 -c32 -r10 -l10800 -f 20160909-001.report -t 20160909-001.trx
+```
 
+```bash
 <Raw Results>
   [0] sc:0 lt:63076  rt:0  fl:0 avg_rt: 2677.1 (5)
   [1] sc:61 lt:62635  rt:0  fl:0 avg_rt: 940.5 (5)
@@ -67,5 +70,7 @@ count(s_w_id)
 
 <TpmC>
                  350.422 TpmC
-[centos@ip-172-31-19-10 tpcc-mysql]$ ls
+```
+
+# m4.large, us-west-1, Ausführung über Client (m4.large)
 
